@@ -1,20 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MainApp
+﻿namespace MainApp
 {
-    [Serializable]
-    class Plugin
+    public class Plugin
     {
-        private LoadMode Mode { get; set; } = LoadMode.Auto;
+        public LoadMode mode { get; set; } = LoadMode.Auto;
+        public string name { get; set; }
+        public string author { get; set; }
 
-        private string Name { get; set; }
+        public Plugin()
+        {
 
-        private string Author { get; set; }
+        }
 
-       // private string version { get; set; }
+        public Plugin(string name, string author)
+        {
+            this.name = name;
+            this.author = author;
+        }
     }
 }

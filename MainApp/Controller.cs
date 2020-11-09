@@ -36,7 +36,9 @@ namespace MainApp
                         if (iface != null)
                         {
                             IPlugin iPlugin = (IPlugin)Activator.CreateInstance(type);
-                            Plugin plugin = new Plugin();
+                            plugins.Add(iPlugin.Name, iPlugin);
+                            Plugin plugin = new Plugin(iPlugin.Name, iPlugin.Author);
+                            listOfPlugins.Add(plugin);
                         }
                     }
                 }

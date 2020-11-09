@@ -7,16 +7,14 @@ namespace MainApp
 {
     public class ConfigLoader
     {
-        private Controller controller = new Controller();
         private XmlSerializer serializer = new XmlSerializer(typeof(List<Plugin>));
         private static readonly string path = AppDomain.CurrentDomain.BaseDirectory;
-       
 
         public bool Serialize()
         {
             using (FileStream fs = new FileStream("test.xml", FileMode.Create))
             {
-                serializer.Serialize(fs, Controller.list);
+                serializer.Serialize(fs, Controller.listOfPlugins);
             }
             return true;
         }
@@ -25,7 +23,7 @@ namespace MainApp
         {
             using (FileStream fs = new FileStream(path, FileMode.Open))
             {
-                Controller.list = (List<String>)serializer.Deserialize(fs);
+               // Controller.listOfPlugins = (List<PluginCFG>)serializer.Deserialize(fs);
             }
             return true;
         }
