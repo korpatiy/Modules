@@ -23,7 +23,7 @@ namespace MainApp
         {
             using (FileStream fs = new FileStream(path, FileMode.Open))
             {
-               // Controller.listOfPlugins = (List<PluginCFG>)serializer.Deserialize(fs);
+               Controller.listOfPlugins = (List<Plugin>)serializer.Deserialize(fs);
             }
             return true;
         }

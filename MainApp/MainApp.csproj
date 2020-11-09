@@ -95,9 +95,9 @@
       <Project>{c49377e6-c09b-4d90-985c-f15c8cfdb8ef}</Project>
       <Name>PluginInterface</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Transforms\Transforms.csproj">
+    <ProjectReference Include="..\Transforms\Reverse.csproj">
       <Project>{d33a643f-9c1f-4e79-acdb-969f34e2bca7}</Project>
-      <Name>Transforms</Name>
+      <Name>Reverse</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

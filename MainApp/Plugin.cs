@@ -2,19 +2,20 @@
 {
     public class Plugin
     {
-        public LoadMode mode { get; set; } = LoadMode.Auto;
-        public string name { get; set; }
-        public string author { get; set; }
-
+        public LoadMode Mode { get; set; } = LoadMode.Auto;
+        public string Name { get; set; }
+        public string Author { get; set; }
+        public string Version { get; set; }
         public Plugin()
         {
 
         }
 
-        public Plugin(string name, string author)
+        public Plugin(string name, string author, string version)
         {
-            this.name = name;
-            this.author = author;
+            this.Name = name;
+            this.Author = author;
+            this.Version = version;
         }
     }
 }

@@ -18,10 +18,8 @@ namespace MainApp
 
         public void FindPlugins()
         {
-            // папка с плагинами
-            string folder = System.AppDomain.CurrentDomain.BaseDirectory;
-
-            // dll-файлы в этой папке
+            string folder = AppDomain.CurrentDomain.BaseDirectory;
+        
             string[] files = Directory.GetFiles(folder, "*.dll");
 
             foreach (string file in files)
@@ -37,8 +35,12 @@ namespace MainApp
                         {
                             IPlugin iPlugin = (IPlugin)Activator.CreateInstance(type);
                             plugins.Add(iPlugin.Name, iPlugin);
-                            Plugin plugin = new Plugin(iPlugin.Name, iPlugin.Author);
-                            listOfPlugins.Add(plugin);
+
+                            /*VersionAttribute versionAttribute = iPlugin.GetType().GetCustomAttribute<VersionAttribute>();
+                            string version = versionAttribute.Major.ToString() + "." + versionAttribute.Minor.ToString();
+                            plugins.Add(iPlugin.Name, iPlugin);
+                            Plugin plugin = new Plugin(iPlugin.Name, iPlugin.Author, version);
+                            listOfPlugins.Add(plugin);*/
                         }
                     }
                 }
@@ -46,8 +48,6 @@ namespace MainApp
                 {
                     MessageBox.Show("Ошибка загрузки плагина\n" + ex.Message);
                 }
-
-           
         }
 
         public void test()
