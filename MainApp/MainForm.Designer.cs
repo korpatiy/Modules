@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.filtersTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.filtersMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.listMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -39,19 +39,26 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.filtersTool,
-            this.testToolStripMenuItem});
+            this.filtersMenu,
+            this.listMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(945, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // filtersTool
+            // filtersMenu
             // 
-            this.filtersTool.Name = "filtersTool";
-            this.filtersTool.Size = new System.Drawing.Size(50, 20);
-            this.filtersTool.Text = "Filters";
+            this.filtersMenu.Name = "filtersMenu";
+            this.filtersMenu.Size = new System.Drawing.Size(50, 20);
+            this.filtersMenu.Text = "Filters";
+            // 
+            // listMenu
+            // 
+            this.listMenu.Name = "listMenu";
+            this.listMenu.Size = new System.Drawing.Size(55, 20);
+            this.listMenu.Text = "GetList";
+            this.listMenu.Click += new System.EventHandler(this.getListMenu_Click);
             // 
             // pictureBox1
             // 
@@ -63,13 +70,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // testToolStripMenuItem
-            // 
-            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
-            this.testToolStripMenuItem.Text = "test";
-            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -92,9 +92,9 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem filtersTool;
+        private System.Windows.Forms.ToolStripMenuItem filtersMenu;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listMenu;
     }
 }
 

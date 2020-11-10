@@ -1,8 +1,10 @@
 ﻿namespace MainApp
 {
+
+
     public class Plugin
     {
-        public LoadMode Mode { get; set; } = LoadMode.Auto;
+        //public LoadMode Mode { get; set; } = LoadMode.Auto;
         public string Name { get; set; }
         public string Author { get; set; }
         public string Version { get; set; }

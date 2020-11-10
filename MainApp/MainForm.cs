@@ -1,11 +1,7 @@
 ﻿using PluginInterface;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Web.UI.WebControls;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace MainApp
@@ -26,8 +22,8 @@ namespace MainApp
             controller.FindPlugins();
             foreach (var x in controller.plugins.Keys)
             {
-                var pluginitem = new ToolStripMenuItem(x, null, OnPluginClick);
-                filtersTool.DropDownItems.Add(pluginitem);
+                var pluginItem = new ToolStripMenuItem(x, null, OnPluginClick);
+                filtersMenu.DropDownItems.Add(pluginItem);
             }
         }
 
@@ -38,9 +34,17 @@ namespace MainApp
             pictureBox1.Invalidate();
         }
 
-        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CFGMenu_Click(object sender, EventArgs e)
         {
-            controller.test();
+           // controller.tryGetDeserialize(openFileDialog);
         }
+
+        private void getListMenu_Click(object sender, EventArgs e)
+        {
+
+
+           // MessageBox.Show();
+        }
+
     }
 }
