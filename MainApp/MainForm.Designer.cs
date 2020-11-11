@@ -63,7 +63,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::MainApp.Properties.Resources.porsche_911_porsche_mashina_152056_2560x1440;
+            this.pictureBox1.Image = global::MainApp.Properties.Resources.imagefiltering;
             this.pictureBox1.Location = new System.Drawing.Point(0, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(945, 588);

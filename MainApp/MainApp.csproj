@@ -54,6 +54,12 @@
   <ItemGroup>
     <Compile Include="ConfigLoader.cs" />
     <Compile Include="Controller.cs" />
+    <Compile Include="ListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListForm.Designer.cs">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,9 @@
     <Compile Include="Plugin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ListForm.resx">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,9 +100,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Blur\Blur.csproj">
+      <Project>{eef1fee5-42ce-4d49-9214-9dbbc602073c}</Project>
+      <Name>Blur</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PluginInterface\PluginInterface.csproj">
       <Project>{c49377e6-c09b-4d90-985c-f15c8cfdb8ef}</Project>
       <Name>PluginInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShadesOfGray\ShadesOfGray.csproj">
+      <Project>{e8c27f40-6356-4d7d-b777-d2c33265a764}</Project>
+      <Name>ShadesOfGray</Name>
     </ProjectReference>
     <ProjectReference Include="..\Transforms\Reverse.csproj">
       <Project>{d33a643f-9c1f-4e79-acdb-969f34e2bca7}</Project>
@@ -102,6 +119,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\porsche_911_porsche_mashina_152056_2560x1440.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagefiltering.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

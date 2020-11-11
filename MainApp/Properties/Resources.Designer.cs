@@ -63,6 +63,16 @@ namespace MainApp.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imagefiltering {
+            get {
+                object obj = ResourceManager.GetObject("imagefiltering", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap porsche_911_porsche_mashina_152056_2560x1440 {
             get {
                 object obj = ResourceManager.GetObject("porsche_911_porsche_mashina_152056_2560x1440", resourceCulture);

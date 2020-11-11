@@ -71,13 +71,10 @@ namespace MainApp
             }
         }
 
-        /*public string getPluginsList()
+        public void getPluginsList()
         {
-            string line = "";
-            foreach(var plugin in plugins)
-            {
-                
-            }
-        }*/
+            var x = new ListForm(plugins);
+            x.Show();
+        }
     }
 }

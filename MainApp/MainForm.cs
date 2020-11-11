@@ -41,9 +41,7 @@ namespace MainApp
 
         private void getListMenu_Click(object sender, EventArgs e)
         {
-
-
-           // MessageBox.Show();
+            controller.getPluginsList();
         }
 
     }
