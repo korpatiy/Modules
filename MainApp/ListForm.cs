@@ -32,10 +32,16 @@ namespace MainApp
         {
             foreach(var plugin in plugins.Values)
             {
+                //string defualt = "def"
                 TreeNode pluginNode = new TreeNode { Text = plugin.Name };
                 pluginNode.Nodes.Add("Autor -" + plugin.Author);
                 VersionAttribute versionAttribute = plugin.GetType().GetCustomAttribute<VersionAttribute>();
-                string version = versionAttribute.Major.ToString() + "." + versionAttribute.Minor.ToString();
+                string version;
+                if (versionAttribute is null)
+                {
+                    version = "default";
+                }
+                else version = versionAttribute.Major.ToString() + "." + versionAttribute.Minor.ToString();
                 pluginNode.Nodes.Add("Version - " + version);
                 treeView1.Nodes.Add(pluginNode);
             }

@@ -25,7 +25,6 @@ namespace MainApp
             configLoader = new ConfigLoader();
             configLoader.Deserialize();
 
-            listOfPlugins = new List<Plugin>();
 
             string folder = AppDomain.CurrentDomain.BaseDirectory;
 
